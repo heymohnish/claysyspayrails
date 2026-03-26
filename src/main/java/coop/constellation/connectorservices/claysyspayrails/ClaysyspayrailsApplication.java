@@ -16,14 +16,13 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 // }
 
-@SpringBootApplication
-@EnableAutoConfiguration(exclude = { DataSourceAutoConfiguration.class })
+@SpringBootApplication(exclude = { DataSourceAutoConfiguration.class })
 public class ClaysyspayrailsApplication {
 
     public static void main(String[] args) {
-         SpringApplication.run(ClaysyspayrailsApplication.class, args);
-        // SpringApplication app = new SpringApplication(ClaysyspayrailsApplication.class);
-        // app.setDefaultProperties(Collections.singletonMap("server.port", "9000"));
-		// app.run(args);  
+        //  SpringApplication.run(ClaysyspayrailsApplication.class, args);
+        SpringApplication app = new SpringApplication(ClaysyspayrailsApplication.class);
+        app.setDefaultProperties(Collections.singletonMap("server.port", "9000"));
+		app.run(args);  
     }
 }

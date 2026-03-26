@@ -1,6 +1,5 @@
 package coop.constellation.connectorservices.claysyspayrails.helpers;
 
-
 import com.xtensifi.connectorservices.common.logging.ConnectorLogging;
 import com.xtensifi.cufx.CustomData;
 import com.xtensifi.cufx.ValuePair;
