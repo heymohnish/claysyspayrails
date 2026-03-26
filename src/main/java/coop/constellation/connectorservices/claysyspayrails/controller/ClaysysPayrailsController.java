@@ -17,9 +17,6 @@ import com.xtensifi.connectorservices.common.events.RealtimeEventService;
 import com.xtensifi.connectorservices.common.logging.ConnectorLogging;
 import com.xtensifi.connectorservices.common.workflow.ConnectorHubService;
 import com.xtensifi.connectorservices.common.workflow.ConnectorRequestData;
-import com.xtensifi.connectorservices.common.workflow.ConnectorRequestParams;
-import com.xtensifi.connectorservices.common.workflow.ConnectorResponse;
-import com.xtensifi.connectorservices.common.workflow.ConnectorState;
 import com.xtensifi.dspco.ConnectorMessage;
 
 // impo     rt coop.constellation.connectorservices.claysyspayrails.handlers.EditTransactionHandler;
@@ -109,7 +106,7 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
         ResponseEntity.BodyBuilder responseEntity = ResponseEntity.status(HttpStatus.OK);
 
         connectorHubService
-                .executeConnector(connectorMessage, new ConnectorRequestData("kivapublic", "1.0", "getPartyById"))
+                .executeConnector(null, new ConnectorRequestData("kivapublic", "1.0", "getPartyById"))
                 .thenApply(this.handleResponseEntity(retrieveUserByIdHandler))
                 .thenApplyAsync(connectorHubService.completeAsync())
                 .exceptionally(exception -> connectorHubService.handleAsyncFlowError(exception, connectorMessage,
