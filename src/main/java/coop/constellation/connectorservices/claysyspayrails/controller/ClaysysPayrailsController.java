@@ -75,7 +75,7 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
         return "{ping: 'pong'}";
     }
     // Logger for this object
-    // private ConnectorLogging logger = new ConnectorLogging();
+     private ConnectorLogging logger = new ConnectorLogging();
 
     // ORIGINAL BUSINESS LOGIC METHOD
     // @PostMapping(path = "/businessLogicMethod", consumes = "application/json", produces = "application/json")
@@ -104,14 +104,14 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
     public ResponseEntity<String> getPartyById(@RequestBody final ConnectorMessage connectorMessage) {
 
         ResponseEntity.BodyBuilder responseEntity = ResponseEntity.status(HttpStatus.OK);
-
+        logger.info(connectorMessage, "Initial: ");
         connectorHubService
-                .executeConnector(null, new ConnectorRequestData("kivapublic", "1.0", "getPartyById"))
+                .executeConnector(connectorMessage, new ConnectorRequestData("kivapublic", "1.0", "getPartyById"))
                 .thenApply(this.handleResponseEntity(retrieveUserByIdHandler))
                 .thenApplyAsync(connectorHubService.completeAsync())
                 .exceptionally(exception -> connectorHubService.handleAsyncFlowError(exception, connectorMessage,
                         "Error running retrieveUserById: " + exception.getMessage()));
-
+        logger.info(connectorMessage, "Final: " + responseEntity.build());
         return responseEntity.build();
 
     }
