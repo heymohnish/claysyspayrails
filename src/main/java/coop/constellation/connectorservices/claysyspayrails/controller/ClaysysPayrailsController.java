@@ -17,12 +17,13 @@ import com.xtensifi.connectorservices.common.events.RealtimeEventService;
 import com.xtensifi.connectorservices.common.logging.ConnectorLogging;
 import com.xtensifi.connectorservices.common.workflow.ConnectorHubService;
 import com.xtensifi.connectorservices.common.workflow.ConnectorRequestData;
+import com.xtensifi.connectorservices.common.workflow.ConnectorRequestParams;
 import com.xtensifi.dspco.ConnectorMessage;
 
 // impo     rt coop.constellation.connectorservices.claysyspayrails.handlers.EditTransactionHandler;
 import coop.constellation.connectorservices.claysyspayrails.handlers.MultiCallHandler;
 // import coop.constellation.connectorservices.claysyspayrails.handlers.P2pTransferHandler;
-// import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveAccountListHandler;
+import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveAccountListHandler;
 // import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveAccountListRefreshHandler;
 // import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveTransactionCategoriesHandler;
 // import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveTransactionListHandler;
@@ -46,6 +47,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 // NOTE: Format for "@RequestMapping"
 // RequestMapping("/externalConnector/[Connector Name]/[Connector Version Number]")
+
 @RestController
 @CrossOrigin
 @Controller
@@ -53,16 +55,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/externalConnector/ClaysysPayrails/1.0")
 public class ClaysysPayrailsController extends ConnectorControllerBase {
 
-    
-
     // Following method is required in order for your controller to pass health
     // checks.
     // If the server cannot call awsping and get the expected response yur app will
     // not be active.
-   @Autowired
+    @Autowired
     // ConnectorHubService is required for workflow methods
     private ConnectorHubService connectorHubService;
     private final RetrieveUserByIdHandler retrieveUserByIdHandler;
+    private final RetrieveAccountListHandler retrieveAccountListHandler;
+
     @CrossOrigin
     @GetMapping("/awsping")
     public String getAWSPing() {
@@ -75,21 +77,17 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
         return "{ping: 'pong'}";
     }
     // Logger for this object
-     private ConnectorLogging logger = new ConnectorLogging();
+    private ConnectorLogging logger = new ConnectorLogging();
 
     // ORIGINAL BUSINESS LOGIC METHOD
     // @PostMapping(path = "/businessLogicMethod", consumes = "application/json", produces = "application/json")
     // public ConnectorMessage BusinessLogicMethod(@RequestBody String connectorJson) {
     //     final String logPrefix = "BasicSampleConnector.businessLogicMethod: ";
-
     //     BusinessLogicMethodHandler handler = new BusinessLogicMethodHandler();
-
     //     final ConnectorMessage connectorMessage = handleConnectorMessage(logPrefix, connectorJson, handler);
     //     logger.info(connectorMessage, "Final: " + connectorMessage.getResponse());
     //     return connectorMessage;
-
     // }
-
     // EXTERNAL CALL METHOD
     // @PostMapping(path = "/externalCallMethod", consumes = "application/json", produces = "application/json")
     // public ConnectorMessage ExternalCallMethod(@RequestBody String connectorJson) {
@@ -105,14 +103,60 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
 
         ResponseEntity.BodyBuilder responseEntity = ResponseEntity.status(HttpStatus.OK);
         logger.info(connectorMessage, "Initial: ");
-        connectorHubService
-                .executeConnector(connectorMessage, new ConnectorRequestData("kivapublic", "1.0", "getPartyById"))
-                .thenApply(this.handleResponseEntity(retrieveUserByIdHandler))
-                .thenApplyAsync(connectorHubService.completeAsync())
-                .exceptionally(exception -> connectorHubService.handleAsyncFlowError(exception, connectorMessage,
-                        "Error running retrieveUserById: " + exception.getMessage()));
-        logger.info(connectorMessage, "Final: " + responseEntity.build());
+        try {
+            connectorHubService
+                    .executeConnector(connectorMessage, new ConnectorRequestData("kivapublic", "1.0", "getPartyById"))
+                    .thenApply(this.handleResponseEntity(retrieveUserByIdHandler))
+                    .thenApplyAsync(connectorHubService.completeAsync())
+                    .exceptionally(exception -> connectorHubService.handleAsyncFlowError(exception, connectorMessage,
+                    "Error running retrieveUserById: " + exception.getMessage()));
+            logger.info(connectorMessage, "Final: " + responseEntity.build());
+        } catch (Exception e) {
+            logger.error(connectorMessage, "Error in getPartyById: " + e.getMessage());
+        }
+
         return responseEntity.build();
 
+    }
+
+    @CrossOrigin
+    @PostMapping(path = "/getAccountDetails", consumes = "application/json", produces = "application/json")
+    public ResponseEntity<String> getAccountDetails(@RequestBody final ConnectorMessage connectorMessage) {
+        logger.info(connectorMessage, connectorMessage.toString());
+        ResponseEntity.BodyBuilder responseEntity = ResponseEntity.status(HttpStatus.OK);
+        connectorHubService
+                .initAsyncConnectorRequest(connectorMessage,
+                        new ConnectorRequestData("kivapublic", "1.0", "getAccounts"))
+                .thenApply(this.retrieveFilterAcctParams(connectorMessage))
+                .thenApply(connectorHubService.callConnectorAsync())
+                .thenApplyAsync(connectorHubService.waitForConnectorResponse())
+                .thenApply(this.handleResponseEntity(retrieveAccountListHandler))
+                .thenApplyAsync(connectorHubService.completeAsync())
+                .exceptionally(exception -> connectorHubService.handleAsyncFlowError(exception, connectorMessage,
+                "Error running retrieveAccountList: " + exception.getMessage()));
+
+        return responseEntity.build();
+
+    }
+
+    private Function<ConnectorRequestParams, ConnectorRequestParams> retrieveFilterAcctParams(
+            ConnectorMessage connectorMessage) {
+
+        return connectorRequestParams -> {
+            // Gets a list of all paramters passed into your connector call
+            final Map<String, String> allParams = getAllParams(connectorMessage);
+
+            logger.info(connectorMessage, "all params GC: " + allParams);
+
+            // Finding the value of the filters parameter passed from the tile
+            String strFilter = allParams.getOrDefault("filters", "");
+
+            if (!strFilter.equals("")) {
+                connectorRequestParams.addNameValue("accountFilter", strFilter);
+            }
+
+            // Returns our list of parameters to pass into the kivapublic call
+            return connectorRequestParams;
+        };
     }
 }

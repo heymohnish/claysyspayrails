@@ -1,6 +1,5 @@
 package coop.constellation.connectorservices.claysyspayrails.handlers;
 
-
 import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
@@ -11,24 +10,17 @@ import com.xtensifi.connectorservices.common.logging.ConnectorLogging;
 import com.xtensifi.connectorservices.common.workflow.ConnectorResponse;
 import com.xtensifi.connectorservices.common.workflow.ConnectorState;
 import com.xtensifi.dspco.ConnectorMessage;
-import com.xtensifi.dspco.UserData;
-
 import lombok.RequiredArgsConstructor;
 
 @Service
 @RequiredArgsConstructor
-public class RetrieveUserByIdHandler extends HandlerBase implements ClaysysPayrailsHandlerLogic {
+public class RetrieveAccountListHandler extends HandlerBase implements ClaysysPayrailsHandlerLogic{     
 
-     private final ConnectorLogging logger;
+    private final ConnectorLogging logger;
 
     @Override
     public String generateResponse(final Map<String, String> parms, ConnectorState connectorState)
             throws IOException, ParseException {
-        // Retrieve and log userId
-        UserData userData = connectorState.getConnectorMessage().getExternalServicePayload().getUserData();
-        String userId = userData.getUserId();
-        // logger.info(connectorState.getConnectorMessage(), userId);
-
         List<ConnectorResponse> connectorResponseList = connectorState.getConnectorResponseList().getResponses();
 
         // This is how you capture the response
@@ -37,7 +29,7 @@ public class RetrieveUserByIdHandler extends HandlerBase implements ClaysysPayra
 
             // This is how you retrieve the name of the connector
             String name = connectorResponse.getConnectorRequestData().getConnectorName();
-             logger.info(connectorState.getConnectorMessage(), name);
+            logger.info(connectorState.getConnectorMessage(), name);
 
             // This is how you capture the response
             String data = connectorResponse.getResponse();
@@ -51,6 +43,7 @@ public class RetrieveUserByIdHandler extends HandlerBase implements ClaysysPayra
         connectorState.setResponse(resp);
         return resp;
     }
+
 
     @Override
     public String generateResponse(Map<String, String> parms, String userId, ConnectorMessage connectorMessage)
