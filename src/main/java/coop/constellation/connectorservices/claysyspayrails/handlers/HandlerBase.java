@@ -26,15 +26,15 @@ public abstract class HandlerBase implements HandlerLogic {
         }
     }
 
-    public ConnectorRequestParams createConnectorRequestParams(ConnectorRequestParams connectorRequestParams,
-            Map<String, String> allParams, List<String> paramNames) {
-        for (String name : paramNames) {
-            String param = allParams.getOrDefault(name, "");
-            if (!param.isEmpty()) {
-                connectorRequestParams.addNameValue(name, param);
-            }
-        }
-        return connectorRequestParams;
-    }
+    // public ConnectorRequestParams createConnectorRequestParams(ConnectorRequestParams connectorRequestParams,
+    //         Map<String, String> allParams, List<String> paramNames) {
+    //     for (String name : paramNames) {
+    //         String param = allParams.getOrDefault(name, "");
+    //         if (!param.isEmpty()) {
+    //             connectorRequestParams.addNameValue(name, param);
+    //         }
+    //     }
+    //     return connectorRequestParams;
+    // }
 
 }

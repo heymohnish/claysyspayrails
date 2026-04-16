@@ -1,40 +1,8 @@
 package coop.constellation.connectorservices.claysyspayrails.controller;
 
-import java.io.IOException;
-import java.util.List;
 import java.util.Map;
-import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.xtensifi.connectorservices.common.events.RealtimeEventService;
-
-import com.xtensifi.connectorservices.common.logging.ConnectorLogging;
-import com.xtensifi.connectorservices.common.workflow.ConnectorHubService;
-import com.xtensifi.connectorservices.common.workflow.ConnectorRequestData;
-import com.xtensifi.connectorservices.common.workflow.ConnectorRequestParams;
-import com.xtensifi.dspco.ConnectorMessage;
-
-// impo     rt coop.constellation.connectorservices.claysyspayrails.handlers.EditTransactionHandler;
-import coop.constellation.connectorservices.claysyspayrails.handlers.MultiCallHandler;
-// import coop.constellation.connectorservices.claysyspayrails.handlers.P2pTransferHandler;
-import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveAccountListHandler;
-// import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveAccountListRefreshHandler;
-// import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveTransactionCategoriesHandler;
-// import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveTransactionListHandler;
-import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveUserByIdHandler;
-// import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveUserBySocialHandler;
-// import coop.constellation.connectorservices.claysyspayrails.handlers.StartTransferHandler;
-// import coop.constellation.connectorservices.claysyspayrails.handlers.StopPaymentHandler;
-// import coop.constellation.connectorservices.claysyspayrails.handlers.ValidateMemberAccountInfoHandler;
-import lombok.RequiredArgsConstructor;
-
-import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -45,6 +13,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.xtensifi.connectorservices.common.logging.ConnectorLogging;
+import com.xtensifi.connectorservices.common.workflow.ConnectorHubService;
+import com.xtensifi.connectorservices.common.workflow.ConnectorRequestData;
+import com.xtensifi.connectorservices.common.workflow.ConnectorRequestParams;
+import com.xtensifi.dspco.ConnectorMessage;
+
+import coop.constellation.connectorservices.claysyspayrails.handlers.BitcureExternalHandler;
+import coop.constellation.connectorservices.claysyspayrails.handlers.ExternalCallMethodHandler;
+import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveAccountListHandler;
+import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveUserByIdHandler;
+import lombok.RequiredArgsConstructor;
 // NOTE: Format for "@RequestMapping"
 // RequestMapping("/externalConnector/[Connector Name]/[Connector Version Number]")
 
@@ -64,6 +44,8 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
     private ConnectorHubService connectorHubService;
     private final RetrieveUserByIdHandler retrieveUserByIdHandler;
     private final RetrieveAccountListHandler retrieveAccountListHandler;
+    private final ExternalCallMethodHandler externalCallMethodHandler;
+    private final BitcureExternalHandler bitcureExternalHandler;
 
     @CrossOrigin
     @GetMapping("/awsping")
@@ -78,25 +60,27 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
     }
     // Logger for this object
     private ConnectorLogging logger = new ConnectorLogging();
-
+@CrossOrigin
     // ORIGINAL BUSINESS LOGIC METHOD
-    // @PostMapping(path = "/businessLogicMethod", consumes = "application/json", produces = "application/json")
-    // public ConnectorMessage BusinessLogicMethod(@RequestBody String connectorJson) {
-    //     final String logPrefix = "BasicSampleConnector.businessLogicMethod: ";
-    //     BusinessLogicMethodHandler handler = new BusinessLogicMethodHandler();
-    //     final ConnectorMessage connectorMessage = handleConnectorMessage(logPrefix, connectorJson, handler);
-    //     logger.info(connectorMessage, "Final: " + connectorMessage.getResponse());
-    //     return connectorMessage;
-    // }
-    // EXTERNAL CALL METHOD
-    // @PostMapping(path = "/externalCallMethod", consumes = "application/json", produces = "application/json")
-    // public ConnectorMessage ExternalCallMethod(@RequestBody String connectorJson) {
-    //     final String logPrefix = "BasicSampleConnector.ExternalCallMethod: ";
-    //     ExternalCallMethodHandler handler = new ExternalCallMethodHandler();
-    //     final ConnectorMessage connectorMessage = handleConnectorMessage(logPrefix, connectorJson, handler);
-    //     logger.info(connectorMessage, "Final: " + connectorMessage.getResponse());
-    //     return connectorMessage;
-    // }
+    @PostMapping(path = "/transaction", consumes = "application/json", produces = "application/json")
+    public ConnectorMessage BusinessLogicMethod(@RequestBody String connectorMessageRequest)  {
+        final String logPrefix = "BasicSampleConnector.businessLogicMethod: ";
+        // logger.info(null, "BasicSampleConnector.businessLogicMethod Initial: ");
+        final ConnectorMessage connectorMessage = this.handleConnectorMessage(logPrefix, connectorMessageRequest, externalCallMethodHandler);
+        logger.info(connectorMessage, "Final: " + connectorMessage.getResponse());
+        return connectorMessage;
+    }
+    @CrossOrigin
+    @PostMapping(path = "/getToken", consumes = "application/json", produces = "application/json")
+    public ConnectorMessage getToken(@RequestBody String connectorMessageRequest) {
+
+        final String logPrefix = "BasicSampleConnector.businessLogicMethod: ";
+        // logger.info(null, "BasicSampleConnector.businessLogicMethod Initial: ");
+        final ConnectorMessage connectorMessage = this.handleConnectorMessage(logPrefix, connectorMessageRequest, bitcureExternalHandler);
+        logger.info(connectorMessage, "Final: " + connectorMessage.getResponse());
+        return connectorMessage;
+
+    }
     @CrossOrigin
     @PostMapping(path = "/getPartyById", consumes = "application/json", produces = "application/json")
     public ResponseEntity<String> getPartyById(@RequestBody final ConnectorMessage connectorMessage) {
@@ -118,26 +102,26 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
         return responseEntity.build();
 
     }
+    
+    // @CrossOrigin
+    // @PostMapping(path = "/getAccountDetails", consumes = "application/json", produces = "application/json")
+    // public ResponseEntity<String> getAccountDetails(@RequestBody final ConnectorMessage connectorMessage) {
+    //     logger.info(connectorMessage, connectorMessage.toString());
+    //     ResponseEntity.BodyBuilder responseEntity = ResponseEntity.status(HttpStatus.OK);
+    //     connectorHubService
+    //             .initAsyncConnectorRequest(connectorMessage,
+    //                     new ConnectorRequestData("kivapublic", "1.0", "getAccounts"))
+    //             .thenApply(this.retrieveFilterAcctParams(connectorMessage))
+    //             .thenApply(connectorHubService.callConnectorAsync())
+    //             .thenApplyAsync(connectorHubService.waitForConnectorResponse())
+    //             .thenApply(this.handleResponseEntity(retrieveAccountListHandler))
+    //             .thenApplyAsync(connectorHubService.completeAsync())
+    //             .exceptionally(exception -> connectorHubService.handleAsyncFlowError(exception, connectorMessage,
+    //             "Error running retrieveAccountList: " + exception.getMessage()));
 
-    @CrossOrigin
-    @PostMapping(path = "/getAccountDetails", consumes = "application/json", produces = "application/json")
-    public ResponseEntity<String> getAccountDetails(@RequestBody final ConnectorMessage connectorMessage) {
-        logger.info(connectorMessage, connectorMessage.toString());
-        ResponseEntity.BodyBuilder responseEntity = ResponseEntity.status(HttpStatus.OK);
-        connectorHubService
-                .initAsyncConnectorRequest(connectorMessage,
-                        new ConnectorRequestData("kivapublic", "1.0", "getAccounts"))
-                .thenApply(this.retrieveFilterAcctParams(connectorMessage))
-                .thenApply(connectorHubService.callConnectorAsync())
-                .thenApplyAsync(connectorHubService.waitForConnectorResponse())
-                .thenApply(this.handleResponseEntity(retrieveAccountListHandler))
-                .thenApplyAsync(connectorHubService.completeAsync())
-                .exceptionally(exception -> connectorHubService.handleAsyncFlowError(exception, connectorMessage,
-                "Error running retrieveAccountList: " + exception.getMessage()));
+    //     return responseEntity.build();
 
-        return responseEntity.build();
-
-    }
+    // }
 
     private Function<ConnectorRequestParams, ConnectorRequestParams> retrieveFilterAcctParams(
             ConnectorMessage connectorMessage) {

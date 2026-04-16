@@ -1,0 +1,2892 @@
+[
+    {
+      "transactionId": "TXN10001",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "508.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "UPI Transfer to John",
+      "dateTimePosted": "2026-04-12T17:56:14Z",
+      "status": "Denied",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8624.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10001"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10002",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "949.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Refund from Merchant",
+      "dateTimePosted": "2026-04-11T17:56:14Z",
+      "status": "Pending",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5406.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10002"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10003",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "1253.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Water Bill Payment",
+      "dateTimePosted": "2026-04-10T17:56:14Z",
+      "status": "Pending",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "2362.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10003"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "119.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10004",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "1923.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "IMPS Transfer",
+      "dateTimePosted": "2026-04-09T17:56:14Z",
+      "status": "Pending",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "2027.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10004"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "106.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10005",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "336.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Cash Deposit",
+      "dateTimePosted": "2026-04-08T17:56:14Z",
+      "status": "Posted",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9570.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10005"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10006",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "4913.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Fuel Purchase",
+      "dateTimePosted": "2026-04-07T17:56:14Z",
+      "status": "Denied",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "6218.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10006"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "194.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10007",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "2093.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Refund from Merchant",
+      "dateTimePosted": "2026-04-06T17:56:14Z",
+      "status": "Pending",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "6490.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10007"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10008",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "1569.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-04-05T17:56:14Z",
+      "status": "Posted",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4131.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10008"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "199.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10009",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "398.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-04-04T17:56:14Z",
+      "status": "Void",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "2145.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10009"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1236.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10010",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "3134.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "IMPS Transfer",
+      "dateTimePosted": "2026-04-03T17:56:14Z",
+      "status": "Void",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3836.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10010"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10011",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "4795.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Mobile Recharge",
+      "dateTimePosted": "2026-04-02T17:56:14Z",
+      "status": "Pending",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4689.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10011"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10012",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "4699.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Taxi Fare",
+      "dateTimePosted": "2026-04-01T17:56:14Z",
+      "status": "Pending",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9310.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10012"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "333.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "interestAmount": {
+        "value": "234.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10013",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "2361.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Flight Booking",
+      "dateTimePosted": "2026-03-31T17:56:14Z",
+      "status": "Void",
+      "source": "POS",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3531.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10013"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10014",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "2340.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Cash Deposit",
+      "dateTimePosted": "2026-03-30T17:56:14Z",
+      "status": "Pending",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8588.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10014"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10015",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "2441.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "IMPS Transfer",
+      "dateTimePosted": "2026-03-29T17:56:14Z",
+      "status": "Denied",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3853.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10015"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "893.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10016",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "2334.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Flight Booking",
+      "dateTimePosted": "2026-03-28T17:56:14Z",
+      "status": "Void",
+      "source": "POS",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4079.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10016"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "320.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10017",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "781.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-03-27T17:56:14Z",
+      "status": "Void",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7079.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10017"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10018",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "2790.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Loan EMI Payment",
+      "dateTimePosted": "2026-03-26T17:56:14Z",
+      "status": "Pending",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9960.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10018"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "458.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10019",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "2483.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Restaurant Payment",
+      "dateTimePosted": "2026-03-25T17:56:14Z",
+      "status": "Void",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8543.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10019"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10020",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "3570.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Loan EMI Payment",
+      "dateTimePosted": "2026-03-24T17:56:14Z",
+      "status": "Pending",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3342.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10020"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "295.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10021",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "4801.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "IMPS Transfer",
+      "dateTimePosted": "2026-03-23T17:56:14Z",
+      "status": "Pending",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9742.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10021"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "555.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10022",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "2959.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Mobile Recharge",
+      "dateTimePosted": "2026-03-22T17:56:14Z",
+      "status": "Denied",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4553.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10022"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10023",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "3726.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "ATM Withdrawal",
+      "dateTimePosted": "2026-03-21T17:56:14Z",
+      "status": "Posted",
+      "source": "POS",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8196.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10023"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10024",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "823.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Loan EMI Payment",
+      "dateTimePosted": "2026-03-20T17:56:14Z",
+      "status": "Pending",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9676.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10024"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1456.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "interestAmount": {
+        "value": "498.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10025",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "4227.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-03-19T17:56:14Z",
+      "status": "Posted",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8012.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10025"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10026",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "2787.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Online Shopping - Amazon",
+      "dateTimePosted": "2026-03-18T17:56:14Z",
+      "status": "Pending",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9483.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10026"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10027",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "510.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-03-17T17:56:14Z",
+      "status": "Void",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7124.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10027"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1280.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10028",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "1713.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Restaurant Payment",
+      "dateTimePosted": "2026-03-16T17:56:14Z",
+      "status": "Void",
+      "source": "POS",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "1570.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10028"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "171.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10029",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "4008.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "IMPS Transfer",
+      "dateTimePosted": "2026-03-15T17:56:14Z",
+      "status": "Posted",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "6851.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10029"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10030",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "3624.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-03-14T17:56:14Z",
+      "status": "Pending",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4759.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10030"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1020.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10031",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "1029.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Taxi Fare",
+      "dateTimePosted": "2026-03-13T17:56:14Z",
+      "status": "Posted",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5854.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10031"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10032",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "2326.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Taxi Fare",
+      "dateTimePosted": "2026-03-12T17:56:14Z",
+      "status": "Pending",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3838.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10032"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "110.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10033",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "4012.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Hotel Booking",
+      "dateTimePosted": "2026-03-11T17:56:14Z",
+      "status": "Posted",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "1963.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10033"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "414.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10034",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "2528.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-03-10T17:56:14Z",
+      "status": "Posted",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "1535.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10034"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10035",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "641.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Taxi Fare",
+      "dateTimePosted": "2026-03-09T17:56:14Z",
+      "status": "Void",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5499.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10035"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10036",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "4576.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "ATM Withdrawal",
+      "dateTimePosted": "2026-03-08T17:56:14Z",
+      "status": "Void",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "6066.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10036"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "960.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "interestAmount": {
+        "value": "270.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10037",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "4355.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Cash Deposit",
+      "dateTimePosted": "2026-03-07T17:56:14Z",
+      "status": "Posted",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7755.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10037"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10038",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "4849.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Online Shopping - Amazon",
+      "dateTimePosted": "2026-03-06T17:56:14Z",
+      "status": "Denied",
+      "source": "POS",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4194.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10038"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10039",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "1573.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Loan EMI Payment",
+      "dateTimePosted": "2026-03-05T17:56:14Z",
+      "status": "Posted",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4132.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10039"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "533.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10040",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "3708.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-03-04T17:56:14Z",
+      "status": "Pending",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4151.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10040"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "270.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10041",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "3539.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "ATM Withdrawal",
+      "dateTimePosted": "2026-03-03T17:56:14Z",
+      "status": "Denied",
+      "source": "POS",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7896.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10041"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10042",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "2354.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Restaurant Payment",
+      "dateTimePosted": "2026-03-02T17:56:14Z",
+      "status": "Pending",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "6705.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10042"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "601.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10043",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "4172.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Cash Deposit",
+      "dateTimePosted": "2026-03-01T17:56:14Z",
+      "status": "Denied",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "1029.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10043"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10044",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "3266.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Refund from Merchant",
+      "dateTimePosted": "2026-02-28T17:56:14Z",
+      "status": "Posted",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "1262.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10044"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "92.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10045",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "2180.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "IMPS Transfer",
+      "dateTimePosted": "2026-02-27T17:56:14Z",
+      "status": "Void",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3527.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10045"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "980.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10046",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "4557.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Hotel Booking",
+      "dateTimePosted": "2026-02-26T17:56:14Z",
+      "status": "Pending",
+      "source": "POS",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7297.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10046"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10047",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "2993.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Fuel Purchase",
+      "dateTimePosted": "2026-02-25T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4476.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10047"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10048",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "3041.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Gym Membership",
+      "dateTimePosted": "2026-02-24T17:56:14Z",
+      "status": "Posted",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8138.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10048"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "547.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "interestAmount": {
+        "value": "124.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10049",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "3340.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Mobile Recharge",
+      "dateTimePosted": "2026-02-23T17:56:14Z",
+      "status": "Void",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "1418.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10049"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10050",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "1980.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Taxi Fare",
+      "dateTimePosted": "2026-02-22T17:56:14Z",
+      "status": "Pending",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5504.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10050"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10051",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "1786.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-02-21T17:56:14Z",
+      "status": "Denied",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "1713.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10051"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1745.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10052",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "2885.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Loan EMI Payment",
+      "dateTimePosted": "2026-02-20T17:56:14Z",
+      "status": "Pending",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3297.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10052"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "101.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10053",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "254.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Hotel Booking",
+      "dateTimePosted": "2026-02-19T17:56:14Z",
+      "status": "Void",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "6280.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10053"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10054",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "4109.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "ATM Withdrawal",
+      "dateTimePosted": "2026-02-18T17:56:14Z",
+      "status": "Posted",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "6724.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10054"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "392.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10055",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "115.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Refund from Merchant",
+      "dateTimePosted": "2026-02-17T17:56:14Z",
+      "status": "Denied",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "2771.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10055"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10056",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "1802.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Pharmacy Purchase",
+      "dateTimePosted": "2026-02-16T17:56:14Z",
+      "status": "Void",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3335.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10056"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "142.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10057",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "916.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Restaurant Payment",
+      "dateTimePosted": "2026-02-15T17:56:14Z",
+      "status": "Posted",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3497.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10057"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "376.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10058",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "957.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Hotel Booking",
+      "dateTimePosted": "2026-02-14T17:56:14Z",
+      "status": "Pending",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3030.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10058"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10059",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "2651.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Insurance Premium",
+      "dateTimePosted": "2026-02-13T17:56:14Z",
+      "status": "Denied",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5034.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10059"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10060",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "1848.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Subscription - Netflix",
+      "dateTimePosted": "2026-02-12T17:56:14Z",
+      "status": "Void",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "1831.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10060"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1967.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "interestAmount": {
+        "value": "238.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10061",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "469.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Mobile Recharge",
+      "dateTimePosted": "2026-02-11T17:56:14Z",
+      "status": "Pending",
+      "source": "POS",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3538.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10061"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10062",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "4423.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "NEFT Transfer",
+      "dateTimePosted": "2026-02-10T17:56:14Z",
+      "status": "Denied",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5644.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10062"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10063",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "3855.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "UPI Transfer to John",
+      "dateTimePosted": "2026-02-09T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4827.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10063"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1033.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10064",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "2445.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Pharmacy Purchase",
+      "dateTimePosted": "2026-02-08T17:56:14Z",
+      "status": "Void",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7507.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10064"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "481.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10065",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "3844.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Mobile Recharge",
+      "dateTimePosted": "2026-02-07T17:56:14Z",
+      "status": "Pending",
+      "source": "POS",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7721.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10065"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10066",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "1506.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Cash Deposit",
+      "dateTimePosted": "2026-02-06T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8232.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10066"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "327.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10067",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "1537.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Water Bill Payment",
+      "dateTimePosted": "2026-02-05T17:56:14Z",
+      "status": "Posted",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9259.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10067"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10068",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "3547.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Online Shopping - Amazon",
+      "dateTimePosted": "2026-02-04T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "2607.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10068"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "291.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10069",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "371.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Hotel Booking",
+      "dateTimePosted": "2026-02-03T17:56:14Z",
+      "status": "Pending",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4472.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10069"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "768.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10070",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "1839.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "NEFT Transfer",
+      "dateTimePosted": "2026-02-02T17:56:14Z",
+      "status": "Pending",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9421.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10070"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10071",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "3942.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Loan EMI Payment",
+      "dateTimePosted": "2026-02-01T17:56:14Z",
+      "status": "Posted",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3618.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10071"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10072",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "902.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Hotel Booking",
+      "dateTimePosted": "2026-01-31T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3414.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10072"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1403.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "interestAmount": {
+        "value": "353.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10073",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "4388.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Salary Credit",
+      "dateTimePosted": "2026-01-30T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8858.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10073"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10074",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "3548.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Taxi Fare",
+      "dateTimePosted": "2026-01-29T17:56:14Z",
+      "status": "Void",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5600.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10074"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10075",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "255.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Flight Booking",
+      "dateTimePosted": "2026-01-28T17:56:14Z",
+      "status": "Denied",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4436.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10075"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1292.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10076",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "334.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "IMPS Transfer",
+      "dateTimePosted": "2026-01-27T17:56:14Z",
+      "status": "Posted",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "2364.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10076"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "267.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10077",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "260.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Water Bill Payment",
+      "dateTimePosted": "2026-01-26T17:56:14Z",
+      "status": "Pending",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7301.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10077"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10078",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "133.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "ATM Withdrawal",
+      "dateTimePosted": "2026-01-25T17:56:14Z",
+      "status": "Posted",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4658.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10078"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "437.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10079",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "1524.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Gym Membership",
+      "dateTimePosted": "2026-01-24T17:56:14Z",
+      "status": "Void",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9097.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10079"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10080",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "4084.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Online Shopping - Amazon",
+      "dateTimePosted": "2026-01-23T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5422.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10080"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "334.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10081",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "3521.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Gym Membership",
+      "dateTimePosted": "2026-01-22T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8412.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10081"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1837.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10082",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "231.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "IMPS Transfer",
+      "dateTimePosted": "2026-01-21T17:56:14Z",
+      "status": "Denied",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8630.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10082"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10083",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "447.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Cash Deposit",
+      "dateTimePosted": "2026-01-20T17:56:14Z",
+      "status": "Denied",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9793.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10083"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10084",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "619.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Flight Booking",
+      "dateTimePosted": "2026-01-19T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8680.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10084"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1991.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "interestAmount": {
+        "value": "267.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10085",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "2481.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Pharmacy Purchase",
+      "dateTimePosted": "2026-01-18T17:56:14Z",
+      "status": "Denied",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "2052.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10085"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10086",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "4494.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Restaurant Payment",
+      "dateTimePosted": "2026-01-17T17:56:14Z",
+      "status": "Pending",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9426.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10086"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10087",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "3789.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Insurance Premium",
+      "dateTimePosted": "2026-01-16T17:56:14Z",
+      "status": "Pending",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3432.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10087"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1769.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10088",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "2095.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Fuel Purchase",
+      "dateTimePosted": "2026-01-15T17:56:14Z",
+      "status": "Posted",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7649.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10088"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "270.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10089",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "2793.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "ATM Withdrawal",
+      "dateTimePosted": "2026-01-14T17:56:14Z",
+      "status": "Void",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "3867.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10089"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10090",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "3093.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Electricity Bill Payment",
+      "dateTimePosted": "2026-01-13T17:56:14Z",
+      "status": "Void",
+      "source": "Branch",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "2256.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10090"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1066.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10091",
+      "accountId": "ACC002",
+      "type": "Credit",
+      "amount": {
+        "value": "3567.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-01-12T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "6593.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10091"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10092",
+      "accountId": "ACC003",
+      "type": "Debit",
+      "amount": {
+        "value": "1147.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Taxi Fare",
+      "dateTimePosted": "2026-01-11T17:56:14Z",
+      "status": "Pending",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4674.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10092"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "91.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10093",
+      "accountId": "ACC004",
+      "type": "Credit",
+      "amount": {
+        "value": "3455.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Refund from Merchant",
+      "dateTimePosted": "2026-01-10T17:56:14Z",
+      "status": "Posted",
+      "source": "Bank",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "7458.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10093"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1409.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10094",
+      "accountId": "ACC005",
+      "type": "Debit",
+      "amount": {
+        "value": "2961.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "NEFT Transfer",
+      "dateTimePosted": "2026-01-09T17:56:14Z",
+      "status": "Denied",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5586.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10094"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10095",
+      "accountId": "ACC001",
+      "type": "Credit",
+      "amount": {
+        "value": "4601.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "POS Purchase - Grocery Store",
+      "dateTimePosted": "2026-01-08T17:56:14Z",
+      "status": "Pending",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "1455.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10095"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10096",
+      "accountId": "ACC002",
+      "type": "Debit",
+      "amount": {
+        "value": "3434.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Salary Credit",
+      "dateTimePosted": "2026-01-07T17:56:14Z",
+      "status": "Pending",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "4936.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10096"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1733.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "interestAmount": {
+        "value": "124.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10097",
+      "accountId": "ACC003",
+      "type": "Credit",
+      "amount": {
+        "value": "1961.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Subscription - Netflix",
+      "dateTimePosted": "2026-01-06T17:56:14Z",
+      "status": "Posted",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5141.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10097"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10098",
+      "accountId": "ACC004",
+      "type": "Debit",
+      "amount": {
+        "value": "2023.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Gym Membership",
+      "dateTimePosted": "2026-01-05T17:56:14Z",
+      "status": "Pending",
+      "source": "ATM",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "9849.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10098"
+          }
+        ]
+      }
+    },
+    {
+      "transactionId": "TXN10099",
+      "accountId": "ACC005",
+      "type": "Credit",
+      "amount": {
+        "value": "3412.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "Taxi Fare",
+      "dateTimePosted": "2026-01-04T17:56:14Z",
+      "status": "Denied",
+      "source": "Online",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "5430.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10099"
+          }
+        ]
+      },
+      "principalAmount": {
+        "value": "1769.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    },
+    {
+      "transactionId": "TXN10100",
+      "accountId": "ACC001",
+      "type": "Debit",
+      "amount": {
+        "value": "3678.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      },
+      "description": "IMPS Transfer",
+      "dateTimePosted": "2026-01-03T17:56:14Z",
+      "status": "Void",
+      "source": "MobileApp",
+      "customData": {
+        "valuePair": [
+          {
+            "name": "Balance",
+            "value": "8585.00"
+          },
+          {
+            "name": "TransactionNumber",
+            "value": "10100"
+          }
+        ]
+      },
+      "interestAmount": {
+        "value": "87.00",
+        "currencyCode": "USD",
+        "exchangeRate": "1.0"
+      }
+    }
+  ]
