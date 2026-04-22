@@ -62,8 +62,6 @@ public class BitcureExternalHandler extends HandlerBase implements ClaysysPayrai
 
         try {
 
-            String url = "https://devapi.bitcure.com/api/Access/v1/ValidateUser";
-
             RestTemplate restTemplate = new RestTemplate();
 
             // 🔹 Headers
@@ -71,21 +69,40 @@ public class BitcureExternalHandler extends HandlerBase implements ClaysysPayrai
             headers.set("Authorization", "Bearer " + getToken());
             headers.setContentType(MediaType.MULTIPART_FORM_DATA);
             headers.set("accept", "*/*");
+             ResponseEntity<String> response = null;
+            String type = parms.get("type");
+            if (type.equals("validateUser")) {
+                String url = "https://devapi.bitcure.com/api/Access/v1/ValidateUser";
+                // 🔹 Form Data
+                MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+                body.add("email", parms.get("email"));
+                body.add("source", "PatientApp");
 
-            // 🔹 Form Data
-            MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
-            body.add("email", parms.get("email"));
-            body.add("source", "PatientApp");
+                HttpEntity<MultiValueMap<String, Object>> requestEntity
+                        = new HttpEntity<>(body, headers);
 
-            HttpEntity<MultiValueMap<String, Object>> requestEntity
-                    = new HttpEntity<>(body, headers);
+              response = restTemplate.exchange(
+                        url,
+                        HttpMethod.POST,
+                        requestEntity,
+                        String.class
+                );
+            } else {
+                String url = "https://devapi.bitcure.com/api/Access/test/cdp/token";
+                // 🔹 Form Data
+                MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+                body.add("email", parms.get("email"));
 
-            ResponseEntity<String> response = restTemplate.exchange(
-                    url,
-                    HttpMethod.POST,
-                    requestEntity,
-                    String.class
-            );
+                HttpEntity<MultiValueMap<String, Object>> requestEntity
+                        = new HttpEntity<>(body, headers);
+
+                 response = restTemplate.exchange(
+                        url,
+                        HttpMethod.POST,
+                        requestEntity,
+                        String.class
+                );
+            }
 
             return response.getBody();
 
