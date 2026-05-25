@@ -21,6 +21,7 @@ import com.xtensifi.connectorservices.common.workflow.ConnectorRequestParams;
 import com.xtensifi.dspco.ConnectorMessage;
 
 import coop.constellation.connectorservices.claysyspayrails.handlers.BitcureExternalHandler;
+import coop.constellation.connectorservices.claysyspayrails.handlers.IframeHandler;
 import coop.constellation.connectorservices.claysyspayrails.handlers.ExternalCallMethodHandler;
 import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveAccountListHandler;
 import coop.constellation.connectorservices.claysyspayrails.handlers.RetrieveUserByIdHandler;
@@ -46,6 +47,7 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
     private final RetrieveAccountListHandler retrieveAccountListHandler;
     private final ExternalCallMethodHandler externalCallMethodHandler;
     private final BitcureExternalHandler bitcureExternalHandler;
+    private final IframeHandler iframeHandler;
 
     @CrossOrigin
     @GetMapping("/awsping")
@@ -60,7 +62,7 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
     }
     // Logger for this object
     private ConnectorLogging logger = new ConnectorLogging();
-@CrossOrigin
+    @CrossOrigin
     // ORIGINAL BUSINESS LOGIC METHOD
     @PostMapping(path = "/transaction", consumes = "application/json", produces = "application/json")
     public ConnectorMessage BusinessLogicMethod(@RequestBody String connectorMessageRequest)  {
@@ -80,6 +82,16 @@ public class ClaysysPayrailsController extends ConnectorControllerBase {
         logger.info(connectorMessage, "Final: " + connectorMessage.getResponse());
         return connectorMessage;
 
+    }
+    @CrossOrigin
+    // ORIGINAL BUSINESS LOGIC METHOD
+    @PostMapping(path = "/iframe", consumes = "application/json", produces = "application/json")
+    public ConnectorMessage IframeLogicMethod(@RequestBody String connectorMessageRequest)  {
+        final String logPrefix = "Iframe method: ";
+        // logger.info(null, "BasicSampleConnector.businessLogicMethod Initial: ");
+        final ConnectorMessage connectorMessage = this.handleConnectorMessage(logPrefix, connectorMessageRequest, iframeHandler);
+        logger.info(connectorMessage, "Final: " + connectorMessage.getResponse());
+        return connectorMessage;
     }
     @CrossOrigin
     @PostMapping(path = "/getPartyById", consumes = "application/json", produces = "application/json")
